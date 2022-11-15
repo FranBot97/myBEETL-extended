@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+
+USAGE=",-----.  ,------.,------.,--------.,--.
+|  |) /_ |  .---'|  .---''--.  .--'|  |   
+|  .-.  \|  \`--, |  \`--,    |  |   |  |   
+|  '--' /|  \`---.|  \`---.   |  |   |  '--.
+\`------' \`------'\`------'   \`--'   \`-----'
+Version @PACKAGE_VERSION@
+
+Usage: beetl [--version] [--help] <COMMAND> [ARGS]
+
+Available commands:
+    bwt       Encode a set of nucleotide sequences using Burrows-Wheeler transform
+    unbwt     Decode nucleotide sequences dataset from its BWT
+    correct   Correct sequencing errors in a BWT
+    compare   Compare two BWT datasets
+    search    Search within a BWT dataset
+    extend    Extend BWT intervals to identify their associated sequence numbers
+    index     Generate index for BWT file to speed other algorithms up
+    convert   Convert between file formats
+
+View sub-commands with:
+    beetl <COMMAND> --help
+
+
+Separately, some higher level tools:
+    beetl-fastq
+              Index and search FASTQ files
+    beetl-flow-tumour-normal-fastq-filter
+              Tumour-normal subtraction, filtering out uninteresting reads for faster downstream analysis
+"
+
+VERSION="BEETL v@PACKAGE_VERSION@"
+
+ABS_COMMAND="$(cd "${0%/*}" 2>/dev/null; echo "$PWD"/"${0##*/}")"
+ABS_PATH=`dirname "${ABS_COMMAND}"`
+
+
+if [ "$#" == "0" ]; then
+  echo "${USAGE}" 
+  exit 1
+fi
+
+KEYWORD=$1
+
+# Convert aliases: encode->bwt, decode->unbwt
+case "${KEYWORD}" in
+
+  encode)
+    KEYWORD="bwt"
+    ;;
+
+  decode)
+    KEYWORD="unbwt"
+    ;;
+
+esac
+
+# Jump table
+case "${KEYWORD}" in
+
+  --version|version)
+    echo "${VERSION}"
+    ;;
+
+  --help|help)
+    echo "${USAGE}"
+    ;;
+
+  *)
+    TOOL="${ABS_COMMAND}-${KEYWORD}"
+    if [ -x "${TOOL}" ]; then
+        shift
+        COMMAND="${TOOL} $*"
+        #echo "Launching: ${COMMAND}"
+        ${COMMAND}
+    else
+        echo "Error: Invalid command \"${KEYWORD}\""
+        echo "${USAGE}"
+        exit 1
+    fi
+    ;;
+
+esac

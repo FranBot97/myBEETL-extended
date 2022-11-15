@@ -1,0 +1,5 @@
+libzoo/io/a-FastOFStream.o: \
+ /home/linuxlite/Scrivania/BEETL-RELEASE_1_1_0/src/libzoo/io/FastOFStream.cpp \
+ /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:
