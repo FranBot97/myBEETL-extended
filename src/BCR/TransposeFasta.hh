@@ -15,6 +15,8 @@
 
 #include "SequenceExtractor.hh"
 #include "Tools.hh"
+#include <zlib.h>
+#include "kseq.h"
 
 #include <cstdio>
 #include <fstream>
@@ -26,6 +28,7 @@
 using std::string;
 using std::vector;
 typedef unsigned char uchar;
+KSEQ_INIT(gzFile, gzread);
 
 //TODO spostare tutto nei parametri giusti
 #define BUFFERSIZE 1024// 2^20

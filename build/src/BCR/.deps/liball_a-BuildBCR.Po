@@ -206,18 +206,29 @@ BCR/liball_a-BuildBCR.o: \
  /usr/include/c++/9/bits/algorithmfwd.h \
  /usr/include/c++/9/bits/stl_heap.h \
  /usr/include/c++/9/bits/uniform_int_dist.h /usr/include/c++/9/limits \
- /home/linuxlite/Scrivania/BEETL-RELEASE_1_1_0/src/libzoo/util/Logger.hh \
- /usr/include/c++/9/cstring /usr/include/string.h /usr/include/strings.h \
- /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
- /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
- /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/zlib.h /usr/include/zconf.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /home/linuxlite/Scrivania/BEETL-RELEASE_1_1_0/src/BCR/kseq.h \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+ /usr/include/c++/9/stdlib.h \
+ /home/linuxlite/Scrivania/BEETL-RELEASE_1_1_0/src/libzoo/util/Logger.hh \
+ /usr/include/c++/9/cstring /usr/include/x86_64-linux-gnu/sys/stat.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
  /usr/include/x86_64-linux-gnu/bits/statx.h /usr/include/linux/stat.h \
  /usr/include/linux/types.h /usr/include/x86_64-linux-gnu/asm/types.h \
@@ -231,6 +242,8 @@ BCR/liball_a-BuildBCR.o: \
  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
+ /usr/include/c++/9/chrono /usr/include/c++/9/ratio \
+ /usr/include/c++/9/bits/parse_numbers.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h
 
 /usr/include/stdc-predef.h:
@@ -737,17 +750,27 @@ BCR/liball_a-BuildBCR.o: \
 
 /usr/include/c++/9/limits:
 
-/home/linuxlite/Scrivania/BEETL-RELEASE_1_1_0/src/libzoo/util/Logger.hh:
+/usr/include/zlib.h:
 
-/usr/include/c++/9/cstring:
+/usr/include/zconf.h:
 
-/usr/include/string.h:
+/usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h:
 
-/usr/include/strings.h:
+/usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h:
 
-/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
+/usr/include/limits.h:
 
-/usr/include/x86_64-linux-gnu/bits/string_fortified.h:
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/unistd.h:
 
@@ -764,6 +787,22 @@ BCR/liball_a-BuildBCR.o: \
 /usr/include/x86_64-linux-gnu/bits/unistd.h:
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+
+/home/linuxlite/Scrivania/BEETL-RELEASE_1_1_0/src/BCR/kseq.h:
+
+/usr/include/string.h:
+
+/usr/include/strings.h:
+
+/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
+
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:
+
+/usr/include/c++/9/stdlib.h:
+
+/home/linuxlite/Scrivania/BEETL-RELEASE_1_1_0/src/libzoo/util/Logger.hh:
+
+/usr/include/c++/9/cstring:
 
 /usr/include/x86_64-linux-gnu/sys/stat.h:
 
@@ -800,5 +839,11 @@ BCR/liball_a-BuildBCR.o: \
 /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
+
+/usr/include/c++/9/chrono:
+
+/usr/include/c++/9/ratio:
+
+/usr/include/c++/9/bits/parse_numbers.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h:

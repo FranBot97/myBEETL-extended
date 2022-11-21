@@ -31,7 +31,6 @@
 
 //TODO spostare tutto in TransposeFasta.hh oppure parameters
 using namespace std;
-KSEQ_INIT(gzFile, gzread);
 unsigned myTotalLen;
 unsigned maxSeqLen;
 unsigned minSeqLen;
@@ -466,7 +465,7 @@ bool TransposeFasta::convert( const string &input, const string &output, bool ge
         if ( charsBuffered == BUFFERSIZE )
         {
             // write buffers to the files, clear buffers
-#pragma omp parallel for num_threads(4)
+            #pragma omp parallel for num_threads(4)
             for ( SequenceLength i = 0; i < cycleNum_; i++ )
             {
                 //cerr << "writing to " << i << " : " << buf_[i] << endl;
@@ -703,7 +702,7 @@ bool TransposeFasta::computeRLO(const string &input, const string &output, const
         for(unsigned int c=0; c<current_groups->size(); c++){
             group *p = (*current_groups)[c];
             p->newCharacters.clear();
-            free(p);
+            delete p;
         } current_groups->clear();
         //no more first time
         firstTime = false;
@@ -713,13 +712,14 @@ bool TransposeFasta::computeRLO(const string &input, const string &output, const
     for(unsigned int c=0; c<all_groups_odd.size(); c++){
         group *p = all_groups_odd[c];
         p->newCharacters.clear();
-        free(p);
+        delete p;
     }
     for(unsigned int c=0; c<all_groups_even.size(); c++){
         group *p = all_groups_even[c];
         p->newCharacters.clear();
-        free(p);
+        delete p;
     }
+    delete[] cycFileContent;
 
     //Creating info file
     std::stringstream infoFileName;
@@ -738,8 +738,8 @@ bool TransposeFasta::computeRLO(const string &input, const string &output, const
         fprintf(outputInfo, "%d\n", permutation[i]);
         fflush(outputInfo);
     }
-    delete keepOrderRLO;
-    delete permutation;
+    delete[] keepOrderRLO;
+    delete[] permutation;
     fclose(outputInfo);
     return true;
 }

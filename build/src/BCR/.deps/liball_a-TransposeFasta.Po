@@ -202,7 +202,20 @@ BCR/liball_a-TransposeFasta.o: \
  /home/linuxlite/Scrivania/BEETL-RELEASE_1_1_0/src/shared/Config.hh \
  /home/linuxlite/Scrivania/BEETL-RELEASE_1_1_0/src/libzoo/util/Logger.hh \
  /home/linuxlite/Scrivania/BEETL-RELEASE_1_1_0/src/libzoo/util/TemporaryFilesManager.hh \
- /usr/include/inttypes.h
+ /usr/include/inttypes.h /usr/include/c++/9/numeric \
+ /usr/include/c++/9/bits/stl_numeric.h /usr/include/c++/9/functional \
+ /usr/include/c++/9/bits/std_function.h /usr/include/c++/9/math.h \
+ /usr/include/c++/9/cmath /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+ /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+ /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+ /usr/include/x86_64-linux-gnu/bits/mathinline.h
 
 /usr/include/stdc-predef.h:
 
@@ -711,3 +724,37 @@ BCR/liball_a-TransposeFasta.o: \
 /home/linuxlite/Scrivania/BEETL-RELEASE_1_1_0/src/libzoo/util/TemporaryFilesManager.hh:
 
 /usr/include/inttypes.h:
+
+/usr/include/c++/9/numeric:
+
+/usr/include/c++/9/bits/stl_numeric.h:
+
+/usr/include/c++/9/functional:
+
+/usr/include/c++/9/bits/std_function.h:
+
+/usr/include/c++/9/math.h:
+
+/usr/include/c++/9/cmath:
+
+/usr/include/math.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathinline.h:
